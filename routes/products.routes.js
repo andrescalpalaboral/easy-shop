@@ -3,7 +3,8 @@ const { check } = require("express-validator");
 const {
   validateFields,
   validateAdminRole,
-} = require("../middlewares/validate-jwt");
+  validateJWT,
+} = require("../middlewares");
 const {
   geProductsPaginated,
   getProductById,
@@ -16,7 +17,6 @@ const {
   productIsActive,
   categoryAlreadyExists,
 } = require("../helpers/validators");
-const { validateJWT } = require("../middlewares/validate-jwt");
 
 const router = Router();
 
