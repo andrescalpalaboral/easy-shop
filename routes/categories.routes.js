@@ -8,10 +8,7 @@ const {
   deleteCategory,
   getCategoryById,
 } = require("../controllers/categories.controller");
-const {
-  validateFields,
-  validateAdminRole,
-} = require("../../../07-rest-server/rest-server-node/middlewares");
+const { validateFields, validateAdminRole } = require("../middlewares");
 const {
   categoryAlreadyExists,
   categoryIsActive,
