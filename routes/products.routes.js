@@ -3,7 +3,7 @@ const { check } = require("express-validator");
 const {
   validateFields,
   validateAdminRole,
-} = require("../../../07-rest-server/rest-server-node/middlewares");
+} = require("../middlewares/validate-jwt");
 const {
   geProductsPaginated,
   getProductById,
