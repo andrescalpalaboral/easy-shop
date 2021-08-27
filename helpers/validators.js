@@ -15,6 +15,13 @@ const categoryIsActive = async (id) => {
   }
 };
 
+const collectionIsAllowed = async (collectionName = "", collections = []) => {
+  if (!collections.includes(collectionName)) {
+    throw new Error(`The collection ${collectionName} is not allowed!`);
+  }
+  return true;
+};
+
 const productAlreadyExists = async (id) => {
   const productFound = await ProductSchema.findById(id);
   if (!productFound) {
@@ -32,6 +39,7 @@ const productIsActive = async (id) => {
 module.exports = {
   categoryAlreadyExists,
   categoryIsActive,
+  collectionIsAllowed,
   productAlreadyExists,
   productIsActive,
 };
